@@ -5,94 +5,113 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Inventário de Paulo Ramos — Slides</title>
 
-  <!-- fonte para o título parecido com o modelo -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="slider" aria-roledescription="carousel">
     <div class="slides" id="slides">
 
-      <!-- SLIDE 1: banner / brasão (imagem que você mandou) -->
+      <!-- SLIDE 1: Banner / brasão (fundo grande) -->
       <section class="slide slide--title" data-index="0" aria-hidden="false">
         <div class="title-wrap">
           <h1>Inventário da realidade<br><span>do município de Paulo Ramos</span></h1>
         </div>
-        <div class="crest-overlay" aria-hidden="true"></div>
+        <!-- background via CSS inline (imagem na pasta imagens/) -->
+        <div class="crest-overlay" id="bg-slide1" aria-hidden="true"></div>
       </section>
 
-      <!-- SLIDE 2: História do município (antes era slide 1) -->
+      <!-- SLIDE 2: História do município -->
       <section class="slide" data-index="1" aria-hidden="true">
-        <h2>História do município</h2>
-        <p>
-          A história de Paulo Ramos, no interior do Maranhão, começa por volta de 1935, quando dois caçadores exploravam a região e se depararam com um pé de bacaba. Encantados com a paisagem e a abundância natural, decidiram se estabelecer ali. Esse local, onde hoje se encontra a praça central da cidade, passou a ser chamado de Bacabinha, em referência direta às palmeiras que dominavam a paisagem. Logo depois, chegaram os primeiros moradores fixos, entre eles Francisco Elói Silva, considerado o primeiro habitante oficial.
-        </p>
+        <div class="content-wrap">
+          <img class="section-img" src="imagens/Imagemsecao2_imagem1.jpg" alt="História" onerror="this.style.display='none'">
+          <div class="text">
+            <h2>História do município</h2>
+            <p>
+              A história de Paulo Ramos, no interior do Maranhão, começa por volta de 1935, quando dois caçadores exploravam a região e se depararam com um pé de bacaba...
+            </p>
+          </div>
+        </div>
       </section>
 
-      <!-- SLIDE 3: Recursos naturais (antes era slide 2) -->
+      <!-- SLIDE 3: Recursos naturais -->
       <section class="slide" data-index="2" aria-hidden="true">
-        <h2>Recursos naturais — reconhecendo a biodiversidade</h2>
-        <ol class="features">
-          <li>Predominância de babaçuais, com grande importância econômica, social e cultural.</li>
-          <li>Presença de árvores nativas como ipês, jatobás e juçaras.</li>
-          <li>Desmatamento para expansão agrícola.</li>
-        </ol>
+        <div class="content-wrap column">
+          <h2>Recursos naturais — reconhecendo a biodiversidade</h2>
+          <ul class="features">
+            <li>Predominância de babaçuais, com grande importância econômica, social e cultural.</li>
+            <li>Presença de árvores nativas como ipês, jatobás e juçaras.</li>
+            <li>Desmatamento para expansão agrícola.</li>
+          </ul>
+          <img class="section-img small" src="imagens/Imagemsecao3_imagem1.jpg" alt="Recursos" onerror="this.style.display='none'">
+        </div>
       </section>
 
-      <!-- SLIDE 4: Rio Grajaú (antes era slide 3) -->
+      <!-- SLIDE 4: Rio Grajaú (duas imagens) -->
       <section class="slide" data-index="3" aria-hidden="true">
         <div class="two-col">
-          <div class="img-placeholder">Rio — imagem</div>
+          <img src="imagens/Imagemsecao4_imagem2.jpg" alt="Rio menor" class="img-small" onerror="this.style.display='none'">
+          <img src="imagens/Imagemsecao4_imagem1.jpg" alt="Rio grande" class="img-big" onerror="this.style.display='none'">
           <div class="text">
             <h2>Rio Grajaú</h2>
             <p>
-              Dentro do contexto dos recursos hídricos do município de Paulo Ramos, destaca-se o Rio Grajaú como o principal curso d’água da região, não apenas pelo seu valor ambiental, mas também por sua importância sociocultural, sendo palco do maior festival de verão do estado do Maranhão, o tradicional Festival do Galo Duro, que atrai centenas de pessoas às suas margens todos os anos.
+              Dentro do contexto dos recursos hídricos do município de Paulo Ramos, destaca-se o Rio Grajaú como o principal curso d’água da região...
             </p>
           </div>
         </div>
       </section>
 
-      <!-- SLIDE 5: Pessoas/famílias (permanece o 5) -->
+      <!-- SLIDE 5: Pessoas / famílias -->
       <section class="slide" data-index="4" aria-hidden="true">
-        <h2>Pessoas / famílias que compõem a comunidade da escola</h2>
-        <ul class="bullet">
-          <li>20.792 habitantes</li>
-          <li>Povos oriundos do Ceará</li>
-          <li>Há pessoas portadoras de deficiências físicas</li>
-        </ul>
+        <div class="content-wrap">
+          <img class="circle" src="imagens/Imagemsecao5_imagem1.jpg" alt="Praça" onerror="this.style.display='none'">
+          <div class="text">
+            <h2>Pessoas/famílias que compõem a comunidade da escola</h2>
+            <ul class="bullet">
+              <li>20.792 habitantes</li>
+              <li>Povos oriundos do Ceará</li>
+              <li>Há pessoas portadoras de deficiências físicas</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <!-- SLIDE 6: Formas de trabalho (antes era slide 4) -->
+      <!-- SLIDE 6: Formas de trabalho (foto à esquerda) -->
       <section class="slide" data-index="5" aria-hidden="true">
-        <h2>Formas de trabalho e sua organização</h2>
-        <ul class="bullet">
-          <li>Agricultura familiar: cultivo do arroz, milho, feijão</li>
-          <li>Trabalhadores assalariados</li>
-          <li>Trabalho doméstico</li>
-          <li>Mulheres, crianças e jovens</li>
-        </ul>
+        <div class="two-col">
+          <img src="imagens/Imagemsecao6_imagem1.jpg" alt="Trabalho" class="img-vertical" onerror="this.style.display='none'">
+          <div class="text">
+            <h2>Formas de trabalho e sua organização</h2>
+            <ul class="bullet">
+              <li>Agricultura familiar: cultivo do arroz, milho, feijão</li>
+              <li>Trabalhadores assalariados</li>
+              <li>Trabalho doméstico</li>
+              <li>Mulheres, crianças e jovens</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <!-- SLIDE 7: Lutas sociais (permanece o 7) -->
+      <!-- SLIDE 7: Lutas sociais (entrada da cidade) -->
       <section class="slide" data-index="6" aria-hidden="true">
         <div class="two-col">
-          <div class="img-placeholder">Entrada da cidade</div>
+          <img src="imagens/Imagemsecao7_imagem1.jpg" alt="Entrada da cidade" class="img-card" onerror="this.style.display='none'">
           <div class="text">
             <h2>Lutas sociais e formas de organização política</h2>
             <p>
-              A história de Paulo Ramos é marcada por lutas sociais em defesa da terra, da educação, da saúde e da dignidade das famílias do campo. A população tem buscado formas de inserção política por meio de associações comunitárias, igrejas, sindicatos rurais e movimentos sociais ligados à agricultura familiar e à reforma agrária.
+              A história de Paulo Ramos é marcada por lutas sociais em defesa da terra, da educação, da saúde e da dignidade das famílias do campo...
             </p>
           </div>
         </div>
       </section>
+
     </div>
 
     <!-- CONTROLES -->
     <div class="controls" role="toolbar" aria-label="Controles do carrossel">
-      <button id="prevBtn" aria-label="Anterior">◀ Anterior</button>
+      <button id="prevBtn" aria-label="Anterior">◀</button>
       <div class="dots" id="dots" role="tablist" aria-label="Navegação por slides"></div>
-      <button id="nextBtn" aria-label="Próximo">Próximo ▶</button>
+      <button id="nextBtn" aria-label="Próximo">▶</button>
     </div>
   </main>
 

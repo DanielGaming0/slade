@@ -1,91 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inventário de Paulo Ramos</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inventário de Paulo Ramos — Slides</title>
+
+  <!-- fonte para o título parecido com o modelo -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="slider" aria-roledescription="carousel">
+    <div class="slides" id="slides">
 
-<div class="slider">
+      <!-- SLIDE 1: banner / brasão (imagem que você mandou) -->
+      <section class="slide slide--title" data-index="0" aria-hidden="false">
+        <div class="title-wrap">
+          <h1>Inventário da realidade<br><span>do município de Paulo Ramos</span></h1>
+        </div>
+        <div class="crest-overlay" aria-hidden="true"></div>
+      </section>
 
-    <!-- Slide 1 -->
-    <div class="slide historia active">
+      <!-- SLIDE 2: História do município (antes era slide 1) -->
+      <section class="slide" data-index="1" aria-hidden="true">
         <h2>História do município</h2>
         <p>
-        A história de Paulo Ramos, no interior do Maranhão, começa por volta de 1935, quando dois caçadores exploravam a região e se depararam com um pé de bacaba. Encantados com a paisagem e a abundância natural, decidiram se estabelecer ali. Esse local, onde hoje se encontra a praça central da cidade, passou a ser chamado de Bacabinha, em referência direta às palmeiras que dominavam a paisagem. Logo depois, chegaram os primeiros moradores fixos, entre eles Francisco Elói Silva, considerado o primeiro habitante oficial.
+          A história de Paulo Ramos, no interior do Maranhão, começa por volta de 1935, quando dois caçadores exploravam a região e se depararam com um pé de bacaba. Encantados com a paisagem e a abundância natural, decidiram se estabelecer ali. Esse local, onde hoje se encontra a praça central da cidade, passou a ser chamado de Bacabinha, em referência direta às palmeiras que dominavam a paisagem. Logo depois, chegaram os primeiros moradores fixos, entre eles Francisco Elói Silva, considerado o primeiro habitante oficial.
         </p>
-    </div>
+      </section>
 
-    <!-- Slide 2 -->
-    <div class="slide recursos">
-        <h2>Recursos naturais reconhecendo a biodiversidade</h2>
-        <p>1. Predominância de babaçuais, com grande importância econômica, social e cultural.</p>
-        <p>2. Presença de árvores nativas como ipês, jatobás e juçaras.</p>
-        <p>3. Desmatamento para expansão agrícola.</p>
-    </div>
+      <!-- SLIDE 3: Recursos naturais (antes era slide 2) -->
+      <section class="slide" data-index="2" aria-hidden="true">
+        <h2>Recursos naturais — reconhecendo a biodiversidade</h2>
+        <ol class="features">
+          <li>Predominância de babaçuais, com grande importância econômica, social e cultural.</li>
+          <li>Presença de árvores nativas como ipês, jatobás e juçaras.</li>
+          <li>Desmatamento para expansão agrícola.</li>
+        </ol>
+      </section>
 
-    <!-- Slide 3 -->
-    <div class="slide rio">
-        <div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Rio_Graja%C3%BA.jpg" alt="Rio Grajaú">
-        </div>
-        <div>
+      <!-- SLIDE 4: Rio Grajaú (antes era slide 3) -->
+      <section class="slide" data-index="3" aria-hidden="true">
+        <div class="two-col">
+          <div class="img-placeholder">Rio — imagem</div>
+          <div class="text">
             <h2>Rio Grajaú</h2>
             <p>
-            Dentro do contexto dos recursos hídricos do município de Paulo Ramos, destaca-se o Rio Grajaú como o principal curso d’água da região, não apenas pelo seu valor ambiental, mas também por sua importância sociocultural, sendo palco do maior festival de verão do estado do Maranhão, o tradicional Festival do Galo Duro, que atrai centenas de pessoas às suas margens todos os anos, durante todos os domingos do mês de julho.
+              Dentro do contexto dos recursos hídricos do município de Paulo Ramos, destaca-se o Rio Grajaú como o principal curso d’água da região, não apenas pelo seu valor ambiental, mas também por sua importância sociocultural, sendo palco do maior festival de verão do estado do Maranhão, o tradicional Festival do Galo Duro, que atrai centenas de pessoas às suas margens todos os anos.
             </p>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <!-- Slide 4 -->
-    <div class="slide trabalho">
+      <!-- SLIDE 5: Pessoas/famílias (permanece o 5) -->
+      <section class="slide" data-index="4" aria-hidden="true">
+        <h2>Pessoas / famílias que compõem a comunidade da escola</h2>
+        <ul class="bullet">
+          <li>20.792 habitantes</li>
+          <li>Povos oriundos do Ceará</li>
+          <li>Há pessoas portadoras de deficiências físicas</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 6: Formas de trabalho (antes era slide 4) -->
+      <section class="slide" data-index="5" aria-hidden="true">
         <h2>Formas de trabalho e sua organização</h2>
-        <ul>
-            <li>Agricultura familiar (cultivo do arroz, milho, feijão)</li>
-            <li>Trabalhadores assalariados</li>
-            <li>Trabalho doméstico</li>
-            <li>Mulheres, crianças e jovens</li>
+        <ul class="bullet">
+          <li>Agricultura familiar: cultivo do arroz, milho, feijão</li>
+          <li>Trabalhadores assalariados</li>
+          <li>Trabalho doméstico</li>
+          <li>Mulheres, crianças e jovens</li>
         </ul>
-    </div>
+      </section>
 
-    <!-- Slide 5 -->
-    <div class="slide comunidade">
-        <h2>Pessoas/famílias que compõem a comunidade da escola</h2>
-        <ul>
-            <li>20.792 habitantes</li>
-            <li>Povos oriundos do Ceará</li>
-            <li>Há pessoas portadoras de deficiências físicas</li>
-        </ul>
-    </div>
-
-    <!-- Slide 6 -->
-    <div class="slide inventario">
-        <h1>Inventário da realidade do município de Paulo Ramos</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Bandeira_de_Paulo_Ramos_-_MA.svg" alt="Bandeira de Paulo Ramos" style="max-width:300px;">
-    </div>
-
-    <!-- Slide 7 -->
-    <div class="slide lutas">
-        <div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Paulo_Ramos_MA.jpg" alt="Entrada da cidade">
-        </div>
-        <div>
-            <h2>Lutas sociais e formas de inserção e organização políticas das famílias</h2>
+      <!-- SLIDE 7: Lutas sociais (permanece o 7) -->
+      <section class="slide" data-index="6" aria-hidden="true">
+        <div class="two-col">
+          <div class="img-placeholder">Entrada da cidade</div>
+          <div class="text">
+            <h2>Lutas sociais e formas de organização política</h2>
             <p>
-            A história de Paulo Ramos é marcada por lutas sociais em defesa da terra, da educação, da saúde e da dignidade das famílias do campo. A população tem buscado formas de inserção política por meio de associações comunitárias, igrejas, sindicatos rurais e movimentos sociais ligados à agricultura familiar e à reforma agrária.
+              A história de Paulo Ramos é marcada por lutas sociais em defesa da terra, da educação, da saúde e da dignidade das famílias do campo. A população tem buscado formas de inserção política por meio de associações comunitárias, igrejas, sindicatos rurais e movimentos sociais ligados à agricultura familiar e à reforma agrária.
             </p>
+          </div>
         </div>
+      </section>
     </div>
 
-    <!-- Botões -->
-    <div class="controls">
-        <button onclick="prevSlide()">◀ Anterior</button>
-        <button onclick="nextSlide()">Próximo ▶</button>
+    <!-- CONTROLES -->
+    <div class="controls" role="toolbar" aria-label="Controles do carrossel">
+      <button id="prevBtn" aria-label="Anterior">◀ Anterior</button>
+      <div class="dots" id="dots" role="tablist" aria-label="Navegação por slides"></div>
+      <button id="nextBtn" aria-label="Próximo">Próximo ▶</button>
     </div>
-</div>
+  </main>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

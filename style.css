@@ -1,122 +1,107 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    overflow-x: hidden;
+:root{
+  --green-dark: #0d4d25;
+  --green-light: #e6f0e7;
+  --white: #ffffff;
+  --text: #222;
+  --transition-time: 600ms;
 }
 
-/* SLIDER */
-.slider {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-.slide {
-    width: 100%;
-    height: 100%;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-}
-.slide.active {
-    display: flex;
+*{box-sizing:border-box}
+html,body{height:100%;font-family:Inter, Arial, sans-serif;color:var(--text);margin:0}
+.slider{position:relative;width:100%;height:100vh;overflow:hidden;background:var(--white)}
+
+/* container das seções (slides) */
+.slides{position:relative;width:100%;height:100%}
+
+/* slide padrão */
+.slide{
+  position:absolute;
+  left:0; top:0;
+  width:100%;
+  height:100%;
+  padding:48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  background:var(--white);
+  transform:translateX(100%);
+  opacity:0;
+  transition: transform var(--transition-time) ease, opacity var(--transition-time) ease;
+  will-change: transform, opacity;
 }
 
-/* TÍTULOS */
-h1, h2 {
-    color: #0d4d25; /* Verde escuro das imagens */
-    text-align: center;
-    margin-bottom: 20px;
-}
-p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: justify;
-}
-ul {
-    list-style: none;
-    font-size: 1.1rem;
-    line-height: 1.6;
+/* slide ativo */
+.slide.active{
+  transform:translateX(0);
+  opacity:1;
+  z-index:2;
 }
 
-/* BOTÕES */
-.controls {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+/* quando slide está saindo para esquerda/direita, manipulado pelo JS via transform */
+.slide .title-wrap{max-width:1200px;margin:0 auto;text-align:center;width:100%}
+.slide h1{
+  font-family: 'Playfair Display', serif;
+  font-size:48px;
+  color:var(--green-dark);
+  line-height:1.05;
+  margin:0 0 10px;
 }
-button {
-    background: #0d4d25; /* Verde escuro das faixas */
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: 0.3s;
+.slide h1 span{display:block;font-size:48px}
+
+/* títulos e textos */
+.slide h2{
+  font-size:32px;color:var(--green-dark);margin-bottom:18px;font-weight:600
 }
-button:hover {
-    background: #093b1c; /* Verde ainda mais escuro */
+.slide p{font-size:16px;line-height:1.6;max-width:980px}
+.features, .bullet{margin-left:18px;padding-left:12px}
+.features li, .bullet li{margin-bottom:12px;font-size:16px}
+
+/* slide 1 (banner/brasão) - usa a imagem fornecida */
+.slide--title{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0;
+  overflow:hidden;
+}
+.slide--title .title-wrap{
+  position:relative;
+  z-index:3;
+  padding:80px 24px;
+}
+.slide--title h1{color:var(--green-dark);font-size:48px;text-shadow:0 1px 0 rgba(255,255,255,0.6)}
+.slide--title .crest-overlay{
+  position:absolute;inset:0;background-image:url('slide1-bg.jpg');background-size:cover;background-position:center;filter:brightness(1);opacity:1;z-index:1;
 }
 
-/* CORES DE FUNDO POR SLIDE */
-.historia {
-    background-color: #ffffff; /* branco */
-    background-image: url('folhas-canto.png'); /* se quiser as folhas decorativas */
-    background-position: top right, bottom left;
-    background-repeat: no-repeat;
-    background-size: 150px;
-}
-.recursos {
-    background-color: #0d4d25; /* verde escuro */
-    color: white;
-}
-.rio {
-    background-color: #ffffff;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-}
-.trabalho {
-    background-color: #e6f0e7; /* verde clarinho */
-}
-.comunidade {
-    background-color: #ffffff;
-}
-.inventario {
-    background-color: #e6f0e7;
-    text-align: center;
-}
-.lutas {
-    background-color: #ffffff;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-}
+/* duas colunas simples (imagem placeholder + texto) */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;width:100%}
+.img-placeholder{height:320px;border-radius:12px;background:linear-gradient(180deg,#cfead7, #e6f0e7);display:flex;align-items:center;justify-content:center;color:var(--green-dark);font-weight:600}
 
-/* IMAGENS */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+/* controles */
+.controls{
+  position:absolute;left:0;right:0;bottom:18px;display:flex;align-items:center;justify-content:center;gap:14px;z-index:10;
 }
+.controls button{
+  background:var(--green-dark);color:#fff;border:none;padding:10px 16px;border-radius:8px;font-weight:600;cursor:pointer;
+  box-shadow:0 4px 10px rgba(10,10,10,0.08);
+}
+.controls button:active{transform:translateY(1px)}
 
-/* RESPONSIVIDADE */
-@media (max-width: 768px) {
-    .rio, .lutas {
-        grid-template-columns: 1fr;
-    }
+/* dots */
+.dots{display:flex;gap:8px;margin:0 8px}
+.dot{
+  width:12px;height:12px;border-radius:50%;background:rgba(0,0,0,0.15);cursor:pointer;border:2px solid rgba(255,255,255,0.0)
+}
+.dot.active{background:var(--green-dark);box-shadow:0 2px 6px rgba(13,77,37,0.28)}
+
+/* responsivo */
+@media(max-width:900px){
+  .slide h1{font-size:36px}
+  .slide h2{font-size:24px}
+  .two-col{grid-template-columns:1fr}
+  .img-placeholder{height:200px}
+  .slide{padding:28px}
 }

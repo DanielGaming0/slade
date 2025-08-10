@@ -160,6 +160,22 @@ html, body {
   box-shadow: var(--shadow-lg);
 }
 
+/* Project images (slide 13) */
+.project-images {
+  display: flex;
+  gap: 20px;
+  width: 45%;
+  flex-direction: column;
+}
+
+.project-image {
+  width: 100%;
+  max-height: 35vh;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
 /* Headings */
 h2 {
   font-size: 36px;
@@ -584,6 +600,10 @@ p {
   .justificativa-img, .slide-image {
     width: 40%;
   }
+  
+  .project-images {
+    width: 40%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -598,6 +618,15 @@ p {
   .justificativa-img, .slide-image {
     width: 45%;
     max-height: 70vh;
+  }
+  
+  .project-images {
+    width: 45%;
+    flex-direction: row;
+  }
+  
+  .project-image {
+    max-height: 30vh;
   }
 }
 
@@ -622,6 +651,16 @@ p {
     max-width: 100%;
     max-height: 300px;
     order: -1;
+  }
+  
+  .project-images {
+    width: 100%;
+    flex-direction: column;
+    order: -1;
+  }
+  
+  .project-image {
+    max-height: 200px;
   }
   
   .icon-circle {
@@ -704,5 +743,9 @@ p {
   
   .work-grid, .culture-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .project-images {
+    gap: 10px;
   }
 }

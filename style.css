@@ -81,28 +81,28 @@ html, body {
 
 .logo-container {
   position: absolute;
-  top: 40px;
+  top: 20px;
   z-index: 4;
-  max-width: 200px;
+  max-width: 250px;
 }
 
 .logo-image {
   width: 100%;
   height: auto;
-  max-height: 150px;
+  max-height: 180px;
   object-fit: contain;
 }
 
 .title-wrap {
   position: relative;
   z-index: 3;
-  padding: 80px 24px;
+  padding: 60px 24px;
   max-width: 900px;
 }
 
 .slide--title h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 48px;
+  font-size: 42px;
   color: var(--white);
   line-height: 1.05;
   margin: 0;
@@ -111,11 +111,11 @@ html, body {
 
 .slide--title span {
   display: block;
-  font-size: 48px;
+  font-size: 42px;
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 18px;
   color: rgba(255,255,255,0.9);
   margin-top: 16px;
   font-weight: 300;
@@ -128,7 +128,24 @@ html, body {
   z-index: 1;
 }
 
-/* Content wrappers */
+/* Slide 4 - Justificativa com imagem */
+.slide[data-index="3"] .content-wrap {
+  position: relative;
+  padding-right: 400px; /* Espaço para a imagem */
+}
+
+.slide[data-index="3"] .justificativa-img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 350px;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Restante do CSS permanece igual */
 .content-wrap {
   display: flex;
   gap: 48px;
@@ -538,28 +555,6 @@ p {
   border-radius: 2px;
 }
 
-.timeline-item {
-  position: relative;
-  padding-bottom: 24px;
-}
-
-.timeline-item:last-child {
-  padding-bottom: 0;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -34px;
-  top: 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--blue-light);
-  border: 3px solid white;
-  box-shadow: 0 0 0 2px var(--blue-light);
-}
-
 /* Controls */
 .controls {
   position: absolute;
@@ -624,6 +619,19 @@ p {
   .work-grid, .culture-grid {
     grid-template-columns: 1fr 1fr;
   }
+  
+  .slide[data-index="3"] .content-wrap {
+    padding-right: 0;
+    flex-direction: column;
+  }
+  
+  .slide[data-index="3"] .justificativa-img {
+    position: relative;
+    transform: none;
+    width: 100%;
+    max-width: 350px;
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -680,7 +688,7 @@ p {
   
   .logo-container {
     top: 20px;
-    max-width: 150px;
+    max-width: 200px;
   }
 }
 
@@ -716,6 +724,6 @@ p {
   }
   
   .logo-container {
-    max-width: 120px;
+    max-width: 150px;
   }
 }

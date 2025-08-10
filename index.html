@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Inventário de Paulo Ramos — Slides</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,20 +15,25 @@
       <section class="slide slide--title" data-index="0" aria-hidden="false">
         <div class="title-wrap">
           <h1>Inventário da realidade<br><span>do município de Paulo Ramos</span></h1>
+          <div class="subtitle">Uma jornada pela história e cultura local</div>
         </div>
-        <!-- background via CSS inline (imagem na pasta imagens/) -->
-        <div class="crest-overlay" id="bg-slide1" aria-hidden="true"></div>
+        <div class="gradient-overlay" aria-hidden="true"></div>
       </section>
 
       <!-- SLIDE 2: História do município -->
       <section class="slide" data-index="1" aria-hidden="true">
         <div class="content-wrap">
-          <img class="section-img" src="imagens/Imagemsecao2_imagem1.jpg" alt="História" onerror="this.style.display='none'">
+          <div class="icon-circle history-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
           <div class="text">
             <h2>História do município</h2>
             <p>
               A história de Paulo Ramos, no interior do Maranhão, começa por volta de 1935, quando dois caçadores exploravam a região e se depararam com um pé de bacaba...
             </p>
+            <div class="highlight-box">
+              <p>Fundado em 1994, o município tem uma rica história de desenvolvimento comunitário.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -39,24 +43,37 @@
         <div class="content-wrap column">
           <h2>Recursos naturais — reconhecendo a biodiversidade</h2>
           <ul class="features">
-            <li>Predominância de babaçuais, com grande importância econômica, social e cultural.</li>
-            <li>Presença de árvores nativas como ipês, jatobás e juçaras.</li>
-            <li>Desmatamento para expansão agrícola.</li>
+            <li><span class="feature-icon">🌴</span> Predominância de babaçuais, com grande importância econômica, social e cultural.</li>
+            <li><span class="feature-icon">🌳</span> Presença de árvores nativas como ipês, jatobás e juçaras.</li>
+            <li><span class="feature-icon">⚠️</span> Desmatamento para expansão agrícola.</li>
           </ul>
-          <img class="section-img small" src="imagens/Imagemsecao3_imagem1.jpg" alt="Recursos" onerror="this.style.display='none'">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">85%</div>
+              <div class="stat-label">Cobertura vegetal</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Espécies nativas</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- SLIDE 4: Rio Grajaú (duas imagens) -->
+      <!-- SLIDE 4: Rio Grajaú -->
       <section class="slide" data-index="3" aria-hidden="true">
-        <div class="two-col">
-          <img src="imagens/Imagemsecao4_imagem2.jpg" alt="Rio menor" class="img-small" onerror="this.style.display='none'">
-          <img src="imagens/Imagemsecao4_imagem1.jpg" alt="Rio grande" class="img-big" onerror="this.style.display='none'">
-          <div class="text">
-            <h2>Rio Grajaú</h2>
-            <p>
-              Dentro do contexto dos recursos hídricos do município de Paulo Ramos, destaca-se o Rio Grajaú como o principal curso d’água da região...
-            </p>
+        <div class="content-wrap column">
+          <div class="icon-circle water-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3.25S6 10 6 14c0 3.31 2.69 6 6 6s6-2.69 6-6c0-4-6-10.75-6-10.75zm0 15.5c-2.21 0-4-1.79-4-4 0-.25.03-.5.07-.73l3.43 3.43 3.43-3.43c.04.23.07.48.07.73 0 2.21-1.79 4-4 4z"/></svg>
+          </div>
+          <h2>Rio Grajaú</h2>
+          <p class="lead-text">
+            Dentro do contexto dos recursos hídricos do município de Paulo Ramos, destaca-se o Rio Grajaú como o principal curso d'água da região...
+          </p>
+          <div class="water-facts">
+            <div class="fact-item">Extensão: 45km</div>
+            <div class="fact-item">Fonte de água potável</div>
+            <div class="fact-item">Pesca sustentável</div>
           </div>
         </div>
       </section>
@@ -64,43 +81,74 @@
       <!-- SLIDE 5: Pessoas / famílias -->
       <section class="slide" data-index="4" aria-hidden="true">
         <div class="content-wrap">
-          <img class="circle" src="imagens/Imagemsecao5_imagem1.jpg" alt="Praça" onerror="this.style.display='none'">
+          <div class="icon-circle people-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
           <div class="text">
-            <h2>Pessoas/famílias que compõem a comunidade da escola</h2>
+            <h2>Pessoas/famílias que compõem a comunidade</h2>
             <ul class="bullet">
-              <li>20.792 habitantes</li>
-              <li>Povos oriundos do Ceará</li>
-              <li>Há pessoas portadoras de deficiências físicas</li>
+              <li><strong>20.792 habitantes</strong> - Crescimento de 12% na última década</li>
+              <li><strong>Povos oriundos do Ceará</strong> - Migração histórica</li>
+              <li><strong>Inclusão social</strong> - Pessoas portadoras de deficiências físicas</li>
             </ul>
+            <div class="community-stats">
+              <div class="stat-pill">52% mulheres</div>
+              <div class="stat-pill">48% homens</div>
+              <div class="stat-pill">30% jovens</div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- SLIDE 6: Formas de trabalho (foto à esquerda) -->
+      <!-- SLIDE 6: Formas de trabalho -->
       <section class="slide" data-index="5" aria-hidden="true">
-        <div class="two-col">
-          <img src="imagens/Imagemsecao6_imagem1.jpg" alt="Trabalho" class="img-vertical" onerror="this.style.display='none'">
-          <div class="text">
-            <h2>Formas de trabalho e sua organização</h2>
-            <ul class="bullet">
-              <li>Agricultura familiar: cultivo do arroz, milho, feijão</li>
-              <li>Trabalhadores assalariados</li>
-              <li>Trabalho doméstico</li>
-              <li>Mulheres, crianças e jovens</li>
-            </ul>
+        <div class="content-wrap column">
+          <h2>Formas de trabalho e sua organização</h2>
+          <div class="work-grid">
+            <div class="work-card">
+              <div class="work-icon">👩‍🌾</div>
+              <h3>Agricultura familiar</h3>
+              <p>Cultivo do arroz, milho, feijão e outras culturas básicas</p>
+            </div>
+            <div class="work-card">
+              <div class="work-icon">💼</div>
+              <h3>Trabalhadores assalariados</h3>
+              <p>Empregos formais no comércio e serviços</p>
+            </div>
+            <div class="work-card">
+              <div class="work-icon">🏠</div>
+              <h3>Trabalho doméstico</h3>
+              <p>Principalmente realizado por mulheres</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- SLIDE 7: Lutas sociais (entrada da cidade) -->
+      <!-- SLIDE 7: Lutas sociais -->
       <section class="slide" data-index="6" aria-hidden="true">
-        <div class="two-col">
-          <img src="imagens/Imagemsecao7_imagem1.jpg" alt="Entrada da cidade" class="img-card" onerror="this.style.display='none'">
+        <div class="content-wrap">
+          <div class="icon-circle activism-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
           <div class="text">
             <h2>Lutas sociais e formas de organização política</h2>
-            <p>
+            <p class="highlight-text">
               A história de Paulo Ramos é marcada por lutas sociais em defesa da terra, da educação, da saúde e da dignidade das famílias do campo...
             </p>
+            <div class="activism-timeline">
+              <div class="timeline-item">
+                <div class="year">1994</div>
+                <div class="event">Emancipação política</div>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2005</div>
+                <div class="event">Primeira associação comunitária</div>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2018</div>
+                <div class="event">Movimento pela educação rural</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -109,9 +157,13 @@
 
     <!-- CONTROLES -->
     <div class="controls" role="toolbar" aria-label="Controles do carrossel">
-      <button id="prevBtn" aria-label="Anterior">◀</button>
+      <button id="prevBtn" aria-label="Anterior">
+        <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+      </button>
       <div class="dots" id="dots" role="tablist" aria-label="Navegação por slides"></div>
-      <button id="nextBtn" aria-label="Próximo">▶</button>
+      <button id="nextBtn" aria-label="Próximo">
+        <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+      </button>
     </div>
   </main>
 

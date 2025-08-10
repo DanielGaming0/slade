@@ -5,10 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const dotsWrap = document.getElementById('dots');
   const TRANS_MS = 600;
 
-  // set background for slide 1 dynamically (file must exist)
-  const bg1 = document.getElementById('bg-slide1');
-  if (bg1) bg1.style.backgroundImage = "url('imagens/Imagemsecao1_imagem1.jpg')";
-
   let current = 0;
   let isAnimating = false;
 
@@ -130,4 +126,21 @@ document.addEventListener('DOMContentLoaded', () => {
       else goTo(current - 1);
     }
   }, {passive:true});
+
+  // Tab functionality for projects
+  const tabs = document.querySelectorAll('.tab');
+  const projectContents = document.querySelectorAll('.project-content');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Remove active class from all tabs and contents
+      tabs.forEach(t => t.classList.remove('active'));
+      projectContents.forEach(c => c.classList.remove('active'));
+      
+      // Add active class to clicked tab and corresponding content
+      tab.classList.add('active');
+      const contentId = tab.dataset.tab;
+      document.querySelector(`.project-content[data-content="${contentId}"]`).classList.add('active');
+    });
+  });
 });

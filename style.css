@@ -52,9 +52,8 @@ html, body {
   height: 100%;
   padding: 48px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   background: var(--white);
   transform: translateX(100%);
   opacity: 0;
@@ -71,6 +70,7 @@ html, body {
 .slide--title {
   padding: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -80,29 +80,29 @@ html, body {
 }
 
 .logo-container {
-  position: absolute;
-  top: 20px;
+  position: relative;
+  margin-bottom: 20px;
   z-index: 4;
-  max-width: 250px;
+  max-width: 300px;
 }
 
 .logo-image {
   width: 100%;
   height: auto;
-  max-height: 180px;
+  max-height: 200px;
   object-fit: contain;
 }
 
 .title-wrap {
   position: relative;
   z-index: 3;
-  padding: 60px 24px;
+  padding: 0 24px;
   max-width: 900px;
 }
 
 .slide--title h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 42px;
+  font-size: 48px;
   color: var(--white);
   line-height: 1.05;
   margin: 0;
@@ -115,7 +115,7 @@ html, body {
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 22px;
   color: rgba(255,255,255,0.9);
   margin-top: 16px;
   font-weight: 300;
@@ -128,30 +128,13 @@ html, body {
   z-index: 1;
 }
 
-/* Slide 4 - Justificativa com imagem */
-.slide[data-index="3"] .content-wrap {
-  position: relative;
-  padding-right: 400px; /* Espaço para a imagem */
-}
-
-.slide[data-index="3"] .justificativa-img {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 350px;
-  height: auto;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-}
-
-/* Restante do CSS permanece igual */
+/* Content layout */
 .content-wrap {
   display: flex;
-  gap: 48px;
+  gap: 60px;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -162,9 +145,22 @@ html, body {
 }
 
 .text {
-  max-width: 720px;
+  flex: 1;
+  max-width: 700px;
 }
 
+/* Images */
+.justificativa-img, .slide-image {
+  width: 45%;
+  max-width: 600px;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Headings */
 h2 {
   font-size: 36px;
   color: var(--blue-dark);
@@ -343,23 +339,6 @@ p {
   color: var(--text-light);
 }
 
-/* Water facts */
-.water-facts {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 24px;
-}
-
-.fact-item {
-  background: var(--blue-pale);
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-size: 16px;
-  color: var(--blue-dark);
-  font-weight: 500;
-}
-
 /* Community stats */
 .community-stats {
   display: flex;
@@ -380,7 +359,7 @@ p {
 /* Work grid */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   width: 100%;
   margin-top: 24px;
@@ -415,14 +394,14 @@ p {
   color: var(--text-light);
 }
 
-/* Activism timeline */
-.activism-timeline {
-  margin-top: 32px;
+/* Timeline */
+.timeline-container {
   position: relative;
+  margin: 24px 0;
   padding-left: 30px;
 }
 
-.activism-timeline::before {
+.timeline-container::before {
   content: '';
   position: absolute;
   left: 0;
@@ -466,7 +445,7 @@ p {
   margin-top: 4px;
 }
 
-/* Estilos para a grade de cultura */
+/* Culture grid */
 .culture-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -504,7 +483,7 @@ p {
   color: var(--text-light);
 }
 
-/* Estilos para abas de projetos */
+/* Project tabs */
 .project-tabs {
   display: flex;
   gap: 8px;
@@ -535,24 +514,6 @@ p {
 
 .project-content.active {
   display: block;
-}
-
-/* Timeline personalizada */
-.timeline-container {
-  position: relative;
-  margin: 24px 0;
-  padding-left: 30px;
-}
-
-.timeline-container::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: var(--blue-pale);
-  border-radius: 2px;
 }
 
 /* Controls */
@@ -615,33 +576,52 @@ p {
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .content-wrap {
+    gap: 40px;
+  }
+  
+  .justificativa-img, .slide-image {
+    width: 40%;
+  }
+}
+
 @media (max-width: 1024px) {
   .work-grid, .culture-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   
-  .slide[data-index="3"] .content-wrap {
-    padding-right: 0;
-    flex-direction: column;
+  .slide {
+    padding: 40px;
   }
   
-  .slide[data-index="3"] .justificativa-img {
-    position: relative;
-    transform: none;
-    width: 100%;
-    max-width: 350px;
-    margin-top: 30px;
+  .justificativa-img, .slide-image {
+    width: 45%;
+    max-height: 70vh;
   }
 }
 
 @media (max-width: 768px) {
   .slide {
     padding: 32px 24px;
+    flex-direction: column;
+    overflow-y: auto;
   }
   
   .content-wrap {
     flex-direction: column;
     gap: 32px;
+  }
+  
+  .text {
+    max-width: 100%;
+  }
+  
+  .justificativa-img, .slide-image {
+    width: 100%;
+    max-width: 100%;
+    max-height: 300px;
+    order: -1;
   }
   
   .icon-circle {
@@ -666,10 +646,6 @@ p {
     font-size: 16px;
   }
   
-  .work-grid, .culture-grid {
-    grid-template-columns: 1fr;
-  }
-  
   .title-wrap h1, .title-wrap span {
     font-size: 32px;
   }
@@ -687,8 +663,7 @@ p {
   }
   
   .logo-container {
-    top: 20px;
-    max-width: 200px;
+    max-width: 250px;
   }
 }
 
@@ -724,6 +699,10 @@ p {
   }
   
   .logo-container {
-    max-width: 150px;
+    max-width: 200px;
+  }
+  
+  .work-grid, .culture-grid {
+    grid-template-columns: 1fr;
   }
 }

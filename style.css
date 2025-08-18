@@ -187,6 +187,38 @@ html, body {
   margin-top: 8px;
 }
 
+/* Thank You Container (no lugar da imagem) */
+.thank-you-container {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px; /* Mesma altura das imagens */
+}
+
+.thank-you {
+  font-size: 36px; /* Mesmo tamanho do h2 */
+  color: var(--blue-dark);
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  position: relative;
+  padding: 20px 40px;
+  background: var(--blue-pale);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.thank-you::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--blue-light);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
 /* Image groups */
 .image-group {
   width: 45%;
@@ -257,22 +289,6 @@ p {
   line-height: 1.6;
   color: var(--text);
   margin-bottom: 16px;
-}
-
-/* Thank You message */
-.thank-you {
-  font-size: 32px;
-  color: var(--blue-dark);
-  margin-top: 40px;
-  text-align: center;
-  font-weight: 600;
-  font-family: 'Playfair Display', serif;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Interview sections */
@@ -432,7 +448,8 @@ p {
   }
   
   .slide-image-container,
-  .image-group {
+  .image-group,
+  .thank-you-container {
     width: 40%;
   }
 }
@@ -446,6 +463,11 @@ p {
     height: 300px;
   }
   
+  .thank-you {
+    font-size: 32px;
+    padding: 15px 30px;
+  }
+  
   .two-images img,
   .three-images img {
     height: 180px;
@@ -453,10 +475,6 @@ p {
   
   .three-images {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .thank-you {
-    font-size: 28px;
   }
 }
 
@@ -477,14 +495,23 @@ p {
   }
   
   .slide-image-container,
-  .image-group {
+  .image-group,
+  .thank-you-container {
     width: 100%;
     order: -1;
+    margin-bottom: 20px;
+    height: auto;
   }
   
   .slide-image {
     height: 250px;
     max-width: 100%;
+  }
+  
+  .thank-you {
+    width: 100%;
+    font-size: 28px;
+    padding: 20px;
   }
   
   .two-images img,
@@ -519,11 +546,6 @@ p {
   
   .subtitle {
     font-size: 18px;
-  }
-
-  .thank-you {
-    font-size: 24px;
-    margin-top: 30px;
   }
   
   .project-tabs {
@@ -579,6 +601,11 @@ p {
     height: 200px;
   }
   
+  .thank-you {
+    font-size: 24px;
+    padding: 15px;
+  }
+  
   .two-images img,
   .three-images img {
     height: 120px;
@@ -587,10 +614,5 @@ p {
   .image-caption,
   .group-caption {
     font-size: 12px;
-  }
-
-  .thank-you {
-    font-size: 20px;
-    margin-top: 20px;
   }
 }
